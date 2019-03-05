@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Games_dodge</string>
+    <string name="rule">How to play:\nTouch the panel below to control direction as well as speed.\nPress the button to dash a short distance\n\n\nTouch anywhere to continue...</string>
+
+</resources>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainArea"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/grass"
+    tools:context=".GameActivity">
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/hover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/grass"
+        android:clickable="true"
+        android:onClick="hoverClick"
+        >
+
+        <TextView
+            android:id="@+id/rule1"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:textColor="#91FF47"
+            android:textAlignment="viewStart"
+
+            android:text="@string/rule"
+            android:layout_marginTop="100dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+
+            />
+    </android.support.constraint.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="31dp"
+        android:textSize="30sp"
+        android:textColor="#70EB6C"
+        android:background="@drawable/item_border"
+        android:padding="10dp"
+        android:text="your score: 0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/gameArea"
+        android:layout_width="0dp"
+        android:layout_height="289dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="10dp"
+        android:background="#559CE999"
+
+        android:scrollX="0dp"
+        android:scrollY="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/score">
+
+        <ImageView
+            android:id="@+id/imageBear"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/bear" />
+
+        <ImageView
+            android:id="@+id/imageLion"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/lion" />
+    </android.support.constraint.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/circle"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gameArea"
+        app:srcCompat="@drawable/circle" />
+
+    <ImageView
+        android:id="@+id/dashBtn"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:background="@drawable/dash"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="50dp"
+        android:clickable="false"
+        android:onClick="dash"
+        app:layout_constraintTop_toBottomOf="@id/gameArea"
+        app:layout_constraintStart_toEndOf="@id/circle"
+        />
+
+
+</android.support.constraint.ConstraintLayout>
